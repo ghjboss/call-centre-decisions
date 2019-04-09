@@ -154,7 +154,7 @@
         <dmn:variable id="_AA085826-7B3D-4855-BF0F-22F0BE040F49" name="Call can be handled" typeRef="boolean"/>
         <dmn:invocation id="_52B5CC10-1C9C-4F61-8E93-67E17A9206E9">
           <dmn:literalExpression id="_9A302039-2608-4C84-BFBB-7C8C75B67DA0">
-            <dmn:text>Can handle call</dmn:text>
+            <dmn:text>Can Handle Call</dmn:text>
           </dmn:literalExpression>
           <dmn:binding>
             <dmn:parameter id="_194EC36C-E997-4BD3-A23B-6ED900716287" name="call" typeRef="tCall"/>
