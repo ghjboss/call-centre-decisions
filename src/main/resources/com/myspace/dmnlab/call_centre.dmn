@@ -147,7 +147,36 @@
     <dmn:informationRequirement id="_402FA6BE-E4E0-4200-89D4-D5178688B824">
       <dmn:requiredInput href="#_F90E4BDD-A528-4626-8C8B-5ACF13ED1BEF"/>
     </dmn:informationRequirement>
-    <dmn:literalExpression/>
+    <dmn:knowledgeRequirement id="_89D99A03-58ED-4FCD-804C-12E2D823E651">
+      <dmn:requiredKnowledge href="#_71C9FF3D-4408-460F-8292-B2A92AC5E11E"/>
+    </dmn:knowledgeRequirement>
+    <dmn:context id="_0D94076A-721F-4EB5-B5C3-E5C4E84AEBEE">
+      <dmn:contextEntry>
+        <dmn:variable id="_AA085826-7B3D-4855-BF0F-22F0BE040F49" name="Call can be handled" typeRef="boolean"/>
+        <dmn:invocation id="_52B5CC10-1C9C-4F61-8E93-67E17A9206E9">
+          <dmn:literalExpression id="_9A302039-2608-4C84-BFBB-7C8C75B67DA0">
+            <dmn:text>Can handle call</dmn:text>
+          </dmn:literalExpression>
+          <dmn:binding>
+            <dmn:parameter id="_194EC36C-E997-4BD3-A23B-6ED900716287" name="call" typeRef="tCall"/>
+            <dmn:literalExpression id="_70C209A9-A011-4059-A981-7FBC32AE13F9">
+              <dmn:text>incoming call</dmn:text>
+            </dmn:literalExpression>
+          </dmn:binding>
+        </dmn:invocation>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_BCD424B0-250D-4F10-9B7D-1C7F611CDBCD" name="employee at office" typeRef="boolean"/>
+        <dmn:literalExpression id="_83DD4FA0-7778-4D23-8B68-F88163837CB5">
+          <dmn:text>employers[office locaiton=office.location]</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:literalExpression id="_278DE99B-2380-46FF-B1D0-7490299B56B3">
+          <dmn:text>if Call can be handled then count(Employee at the office)>0  else false</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+    </dmn:context>
   </dmn:decision>
   <dmn:decision id="_767B0084-55C3-463B-AC2D-D020443CB553" name="Banned Phone Numbers">
     <dmn:variable id="_A0A8C1F0-35E0-4471-B3CA-77B2BFE6FEE7" name="Banned Phone Numbers" typeRef="tPhoneNumbers"/>
@@ -209,6 +238,26 @@
             <kie:width>100.0</kie:width>
             <kie:width>172.0</kie:width>
             <kie:width>100.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_0D94076A-721F-4EB5-B5C3-E5C4E84AEBEE">
+            <kie:width>50.0</kie:width>
+            <kie:width>227.0</kie:width>
+            <kie:width>622.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_52B5CC10-1C9C-4F61-8E93-67E17A9206E9">
+            <kie:width>50.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>452.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_9A302039-2608-4C84-BFBB-7C8C75B67DA0"/>
+          <kie:ComponentWidths dmnElementRef="_70C209A9-A011-4059-A981-7FBC32AE13F9">
+            <kie:width>452.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_83DD4FA0-7778-4D23-8B68-F88163837CB5">
+            <kie:width>622.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_278DE99B-2380-46FF-B1D0-7490299B56B3">
+            <kie:width>622.0</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_295E6650-DCD6-4A07-9AAA-E4B5B89197B8">
             <kie:width>50.0</kie:width>
@@ -336,6 +385,10 @@
       <dmndi:DMNEdge id="dmnedge-_402FA6BE-E4E0-4200-89D4-D5178688B824" dmnElementRef="_402FA6BE-E4E0-4200-89D4-D5178688B824">
         <di:waypoint x="873" y="242"/>
         <di:waypoint x="871" y="87"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-_89D99A03-58ED-4FCD-804C-12E2D823E651" dmnElementRef="_89D99A03-58ED-4FCD-804C-12E2D823E651">
+        <di:waypoint x="339" y="140"/>
+        <di:waypoint x="771" y="87"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-_34C8644C-5CD5-47B1-AA4D-48AE0519F226" dmnElementRef="_34C8644C-5CD5-47B1-AA4D-48AE0519F226">
         <di:waypoint x="312" y="215"/>
