@@ -44,7 +44,30 @@
     <dmn:informationRequirement id="_C7D40A8C-9EB9-427F-8A84-04C343C6491F">
       <dmn:requiredInput href="#_544E73BA-9AE7-4899-8D8D-3DFDB040ABE7"/>
     </dmn:informationRequirement>
-    <dmn:literalExpression/>
+    <dmn:decisionTable id="_F0369D94-883A-4B14-85D1-7D8EC43FD731" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_4088417A-5C34-4846-A9E3-570C61BF8ABB">
+        <dmn:inputExpression id="_25D0DC96-670B-4B7E-8C6A-828BFF1F3390" typeRef="string">
+          <dmn:text>call.purpose</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_8A7B25B1-4774-491E-A135-99C1C7B80BBB" typeRef="boolean"/>
+      <dmn:rule id="_7BAD41C6-6595-4678-9318-9998EC5F0E94">
+        <dmn:inputEntry id="_F4607A79-6313-424C-B2B9-9E37E0BDD6CD">
+          <dmn:text>"help"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_087F66DC-FE05-4BFC-A106-F5F3F84F738F">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_CCDB04A7-BDD6-4A69-A9D3-3EB37A02E788">
+        <dmn:inputEntry id="_157D034A-5FCA-41CA-8990-062F2DE52149">
+          <dmn:text>"objection"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_6ED945EC-AF2F-4DB3-9C0E-1930196CA1EE">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
   </dmn:decision>
   <dmn:decisionService id="_71C9FF3D-4408-460F-8292-B2A92AC5E11E" name="Can Handle Call">
     <dmn:variable id="_E4135A13-1FFC-43F9-8C30-B7C461FE0FBE" name="Can Handle Call" typeRef="boolean"/>
@@ -136,6 +159,12 @@
           <kie:ComponentWidths dmnElementRef="_49FE333A-84D1-4103-8A49-498A88F3AD87"/>
           <kie:ComponentWidths dmnElementRef="_67463643-8ECC-42A7-B0BB-43969A5EE3C0"/>
           <kie:ComponentWidths dmnElementRef="_BAFBF820-27A5-4B5B-8A43-98AA92C47715"/>
+          <kie:ComponentWidths dmnElementRef="_F0369D94-883A-4B14-85D1-7D8EC43FD731">
+            <kie:width>50.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>172.0</kie:width>
+            <kie:width>100.0</kie:width>
+          </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
       <dmndi:DMNShape id="dmnshape-_F90E4BDD-A528-4626-8C8B-5ACF13ED1BEF" dmnElementRef="_F90E4BDD-A528-4626-8C8B-5ACF13ED1BEF" isCollapsed="false">
