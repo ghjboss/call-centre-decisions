@@ -209,7 +209,7 @@
       <dmn:requiredInput href="#_544E73BA-9AE7-4899-8D8D-3DFDB040ABE7"/>
     </dmn:informationRequirement>
     <dmn:literalExpression id="_E568BD06-1542-4860-9ECE-0BE123BF8546">
-      <dmn:text>list contains(Banned Phone Numbers)</dmn:text>
+      <dmn:text>list contains(Banned Phone Numbers, call.phone)</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
   <dmn:inputData id="_EE40D855-3969-494F-94C7-88A4BEB62D0D" name="office">
