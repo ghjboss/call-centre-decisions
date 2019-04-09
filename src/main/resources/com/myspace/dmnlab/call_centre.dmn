@@ -158,7 +158,7 @@
           </dmn:literalExpression>
           <dmn:binding>
             <dmn:parameter id="_194EC36C-E997-4BD3-A23B-6ED900716287" name="call" typeRef="tCall"/>
-            <dmn:literalExpression id="_70C209A9-A011-4059-A981-7FBC32AE13F9">
+            <dmn:literalExpression id="_AA8E9339-D374-4239-9577-E2A73B48A972">
               <dmn:text>incoming call</dmn:text>
             </dmn:literalExpression>
           </dmn:binding>
@@ -249,7 +249,7 @@
             <kie:width>452.0</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_9A302039-2608-4C84-BFBB-7C8C75B67DA0"/>
-          <kie:ComponentWidths dmnElementRef="_70C209A9-A011-4059-A981-7FBC32AE13F9">
+          <kie:ComponentWidths dmnElementRef="_AA8E9339-D374-4239-9577-E2A73B48A972">
             <kie:width>452.0</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_83DD4FA0-7778-4D23-8B68-F88163837CB5">
