@@ -89,7 +89,52 @@
     <dmn:informationRequirement id="_14BA84C5-F48F-4E22-9141-E5E91F8CC369">
       <dmn:requiredDecision href="#_AEA3A86A-E55F-4257-9399-65CE6F77000D"/>
     </dmn:informationRequirement>
-    <dmn:literalExpression/>
+    <dmn:decisionTable id="_295E6650-DCD6-4A07-9AAA-E4B5B89197B8" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_3F6A601D-5063-4662-9DD3-8B83E0380A19">
+        <dmn:inputExpression id="_680507A5-C07F-47E7-B5D1-61FB473A2634" typeRef="boolean">
+          <dmn:text>Is Banned</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_A8EE79E3-4DA1-4B08-AF5F-81B129848F4F">
+        <dmn:inputExpression id="_0583AB22-B0DA-4634-9FD0-DB7866FB878C" typeRef="boolean">
+          <dmn:text>Call Purpose Accepted</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_7C49F279-EBDC-4608-9A77-64D0455D8404" typeRef="boolean"/>
+      <dmn:rule id="_CF744D9A-01FA-4156-B549-5E496007B9FE">
+        <dmn:inputEntry id="_E2C51476-0C6B-4DBF-9867-EA089FDCA950">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D51B52AE-6031-495A-8577-BAEDBA2C5ED2">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_B4DE3CB0-9972-47DF-92BC-7A4F2E4320C8">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_5C1068D9-14AF-4376-B3BE-4E0BCDF7477D">
+        <dmn:inputEntry id="_DC75F97C-4695-4B55-9642-15668ACADE32">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2C5C21EC-8A1F-4B3B-BAC0-B705F8DA1068">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_45614F90-7DA2-49D6-9DA3-F0290EAF5DFF">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_9DBD7DE8-B1D7-471F-8EAE-776D35C4B17E">
+        <dmn:inputEntry id="_0DA2D484-CD44-44EE-82AF-A4FE1A7B47C2">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4A14BE54-E721-4B7C-9B7E-868CE8E56F22">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_F75C5E9B-EBFC-4B32-8CB1-A7A4B657FABA">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
   </dmn:decision>
   <dmn:decision id="_31B074AE-B914-4F3D-B3F9-FC1D8E0133A3" name="Accept Call">
     <dmn:variable id="_5A6C718D-1275-4E98-A0D6-2927DA49B340" name="Accept Call"/>
@@ -163,6 +208,13 @@
             <kie:width>50.0</kie:width>
             <kie:width>100.0</kie:width>
             <kie:width>172.0</kie:width>
+            <kie:width>100.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_295E6650-DCD6-4A07-9AAA-E4B5B89197B8">
+            <kie:width>50.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>191.0</kie:width>
+            <kie:width>235.0</kie:width>
             <kie:width>100.0</kie:width>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
