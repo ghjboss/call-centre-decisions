@@ -166,14 +166,14 @@
         </dmn:invocation>
       </dmn:contextEntry>
       <dmn:contextEntry>
-        <dmn:variable id="_BCD424B0-250D-4F10-9B7D-1C7F611CDBCD" name="employee at office" typeRef="boolean"/>
+        <dmn:variable id="_BCD424B0-250D-4F10-9B7D-1C7F611CDBCD" name="Employee at office" typeRef="boolean"/>
         <dmn:literalExpression id="_83DD4FA0-7778-4D23-8B68-F88163837CB5">
           <dmn:text>employers[office locaiton=office.location]</dmn:text>
         </dmn:literalExpression>
       </dmn:contextEntry>
       <dmn:contextEntry>
         <dmn:literalExpression id="_278DE99B-2380-46FF-B1D0-7490299B56B3">
-          <dmn:text>if Call can be handled then count(Employee at the office)>0  else false</dmn:text>
+          <dmn:text>if Call can be handled then count(Employee at office)>0  else false</dmn:text>
         </dmn:literalExpression>
       </dmn:contextEntry>
     </dmn:context>
